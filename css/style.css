@@ -1,0 +1,855 @@
+/* ==========================================================
+   RESET
+========================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   VARIÁVEIS
+========================================================== */
+
+:root {
+    --bg: #0a0a0f;
+    --bg-elevated: #111117;
+
+    --text: #f0eff5;
+    --text-dim: #8a889a;
+
+    --border: rgba(240, 239, 245, 0.08);
+    --border-color: rgba(255, 255, 255, 0.12);
+    --knob-icon: white;
+
+    --accent: #B8293D;
+    --accent-soft: rgba(155, 107, 255, 0.15);
+    --accent-glow: rgba(232, 93, 117, 0.35);
+
+    --available: #4ade80;
+
+    --track-color: #f5f4f2;
+
+    --button-bg: #B8293D;
+    --button-bg-hover: #C4293F;
+    --button-main: white;
+}
+
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body {
+    position: relative;
+
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+
+    transition:
+        background 0.4s ease,
+        color 0.4s ease;
+}
+
+body::before {
+    content: "";
+
+    position: fixed;
+    top: -10%;
+    right: -5%;
+
+    width: 420px;
+    height: 420px;
+
+    background: radial-gradient(
+        circle,
+        var(--accent-glow) 0%,
+        transparent 70%
+    );
+
+    filter: blur(60px);
+
+    pointer-events: none;
+    z-index: 0;
+
+    transition: background 0.4s ease;
+}
+
+body[data-theme="light"] {
+    --bg: #faf9f6;
+    --knob-icon: black;
+
+    --text: #17161d;
+    --text-dim: #6b6875;
+
+    --title: #17161d;
+    --subtitle: #5c5a52;
+
+    --button-border: #17161d;
+    --border-color: rgba(0, 0, 0, 0.12);
+    --border: rgba(0, 0, 0, 0.1);
+    --button-text: #17161d;
+
+    --accent:#56070c;
+    --accent-glow: rgba(120, 6, 6, 0.25);
+
+    --badge: #780606;
+
+    --track-color: #1a1a1a;
+    
+    --button-bg: #56070c;
+    --button-bg-hover: #780606;
+    --button-main: black;
+}
+/* ==========================================================
+   HEADER
+========================================================== */
+
+header {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+
+    padding: 22px 48px;
+
+    border-bottom: 1px solid var(--border-color);
+
+    backdrop-filter: blur(8px);
+}
+
+header a {
+    color: #1f1f1f;
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+/* ==========================================================
+   DISPONIBILIDADE
+========================================================== */
+
+.availability {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-right: auto;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    color: var(--text-dim);
+}
+
+.availability .dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--available);
+
+    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6);
+
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
+    }
+}
+
+
+/* ==========================================================
+   REDES SOCIAIS
+========================================================== */
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 8px;
+
+    color: var(--text-dim);
+
+    transition:
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+.socials a:hover {
+    color: var(--text);
+    background: var(--accent-soft);
+}
+
+.socials svg {
+    width: 17px;
+    height: 17px;
+}
+
+.socials img.lattes-icon {
+  filter: brightness(0) saturate(100%); /* força ficar preto no modo claro */
+  opacity: 0.65;
+  transition: opacity 0.25s ease;
+}
+
+[data-theme="dark"] .socials img.lattes-icon {
+  filter: brightness(0) saturate(100%) invert(1); /* vira branco no modo escuro */
+  opacity: 0.55;
+}
+
+/* ==========================================================
+   DIVISOR
+========================================================== */
+
+.divider {
+    width: 1px;
+    height: 20px;
+
+    background: var(--border);
+}
+
+
+/* ==========================================================
+   SELETOR DE IDIOMA
+========================================================== */
+
+.language-selector {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12.5px;
+    font-weight: 500;
+}
+
+.language-selector button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: none;
+
+    color: var(--text-dim);
+
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.language-selector button.active {
+    color: var(--accent);
+}
+
+.language-selector span {
+    color: var(--border);
+}
+
+
+/* ==========================================================
+   BOTÃO DE TEMA
+========================================================== */
+
+.theme-toggle {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 48px;
+    height: 26px;
+
+    padding: 3px;
+
+    border: 1px solid var(--border);
+    border-radius: 100px;
+
+    background: var(--track-color);
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+}
+
+.theme-toggle .knob {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+    
+    background: var(--toggle-color);
+    background: #780606;
+
+    color: var(--knob-icon);
+
+    font-size: 10px;
+
+    transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+body[data-theme="light"] .theme-toggle .knob {
+    transform: translateX(22px);
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    gap: 8px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    text-align: left;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-card {
+    display: flex;
+    justify-content: center;
+
+    flex: 1;
+}
+
+
+/* ==========================================================
+   BADGES
+========================================================== */
+
+.badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    text-align: center;
+}
+
+.availability-badge {
+    display: inline-block;
+
+    margin-bottom: 15px;
+    padding: 6px 12px;
+
+    border: 1px solid #780606;
+    border-radius: 20px;
+
+    background-color: #78060617;
+    color: #780606;
+
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+}
+
+
+/* ==========================================================
+   TIPOGRAFIA
+========================================================== */
+
+.code {
+    margin-bottom: 20px;
+
+    color: #999;
+    font-size: 12px;
+}
+
+h1 {
+    margin-bottom: 8px;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--title);
+}
+
+h2 {
+    max-width: 700px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: justify;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--subtitle);
+}
+
+.description {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: justify;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--subtitle);
+}
+
+.name {
+    color: #780606;
+}
+
+/* ==========================================================
+   Estilização da seção "Sobre mim"
+========================================================== */
+.about {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+.about .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+
+.about .eyebrow::before {
+    content: '■ ';
+}
+
+.about h1 {
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+ 
+h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.col-left p {
+    color: var(--text-dim);
+    font-size: 15px;
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+ 
+.diving-into {
+    margin-top: 28px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+}
+ 
+.diving-into .label {
+    font-weight: 600;
+    font-size: 13.5px;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+ 
+.tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    padding: 5px 12px;
+    border-radius: 100px;
+}
+ 
+.milestones-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+}
+ 
+.milestones-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.milestone {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    gap: 14px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+}
+ 
+.milestone:last-child { 
+    border-bottom: none; 
+    margin-bottom: 0; 
+    padding-bottom: 0; 
+}
+ 
+.milestone .year {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--accent);
+}
+ 
+.milestone .title { 
+    font-weight: 600; 
+    font-size: 14px;
+    margin-bottom: 4px; 
+}
+
+.milestone .desc { 
+    font-size: 12.5px; 
+    color: var(--text-dim); 
+    line-height: 1.5; 
+}
+
+.section-subtitle {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    color: var(--text-dim);
+    margin-top: 0;
+}
+
+/* ==========================================================
+   Estilização da seção "Skills"
+========================================================== */
+
+#skills h1 {
+    border-bottom: none;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+ 
+.skill-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 22px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+ 
+.skill-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.skill-card .icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin-bottom: 14px;
+    flex-shrink: 0; 
+}
+ 
+.skill-card h3 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    clear: both;
+}
+ 
+.tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: var(--text-dim);
+    background: var(--bg);
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    border-radius: 100px;
+}
+
+.skill-card.exploring {
+    border: 1.5px dashed var(--accent);
+    background: var(--accent-soft);
+}
+ 
+.skill-card.exploring .icon {
+    background: var(--accent);
+    color: #fff;
+}
+ 
+.skill-card.exploring .tag {
+    color: var(--accent);
+    background: transparent;
+    border-color: var(--accent);
+}
+
+.skill-card.exploring p {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+/* ==========================================================
+   ANIMAÇÃO DE DIGITAÇÃO
+========================================================== */
+
+.typing {
+    display: inline-block;
+
+    width: 0;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    border-right: 2px solid var(--text);
+}
+
+.typing.animate {
+    animation:
+        typing 2s steps(40, end) forwards,
+        blink 0.7s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 18ch;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* ==========================================================
+   BOTÕES
+========================================================== */
+
+.button {
+    display: flex;
+    gap: 12px;
+}
+
+.view-work-button {
+    display: inline-block;
+
+    margin-bottom: 15px;
+    padding: 12px 30px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: var(--button-bg);
+    color: white;
+
+    cursor: pointer;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    transition: background-color 0.2s ease;
+}
+
+.contact-me-button {
+    display: inline-block;
+
+    margin-bottom: 15px;
+    padding: 12px 30px;
+
+    border: 1px solid var(--button-main);
+    border-radius: 20px;
+
+    background: transparent;
+    color: var(--button-main);
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+/* ==========================================================
+   BOTÕES AUXILIARES
+========================================================== */
+
+.btn-primary {
+    background: #7d1616;
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid #777;
+    color: #333;
+}
+
+
+/* ==========================================================
+   GRÁFICO
+========================================================== */
+
+.chart {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+
+    height: 180px;
+    margin: 40px 0;
+}
+
+.bar {
+    width: 24px;
+
+    border-radius: 6px;
+
+    background: #555;
+}
+
+.bar:nth-child(1) {
+    height: 60px;
+}
+
+.bar:nth-child(2) {
+    height: 120px;
+}
+
+.bar:nth-child(3) {
+    height: 80px;
+}
+
+.bar:nth-child(4) {
+    height: 150px;
+    background: #d95d39;
+}
+
+.bar:nth-child(5) {
+    height: 100px;
+}
+
+.bar:nth-child(6) {
+    height: 170px;
+    background: #d95d39;
+}
+
+.bar:nth-child(7) {
+    height: 90px;
+}
+
+.bar:nth-child(8) {
+    height: 130px;
+}
+
+/* ==========================================================
+   Efeito do texto aparecendo
+========================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+ 
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ==========================================================
+   Texto acima do título principal
+========================================================== */
+.eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+}
+ 
+.eyebrow::before { content: '■ '; }
