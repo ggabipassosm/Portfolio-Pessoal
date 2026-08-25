@@ -43,7 +43,17 @@ const translations = {
         EnglishCertificateTitle: "B1-level English certificate",
         EnglishCertificateDesc: "Intensive English Course at the Islington Centre of English in London",
         Skills: "Skills & Technologies",
+        SkillsSubtitle: "A structured ecosystem of tools and technologies I use to build robust software systems.",
         Languages: "Languages",
+        Data: "Data",
+        ResponsibleDesign: "Responsible Design",
+        DataVisualization: "Data Visualization",
+        Tools: "Tools",
+        Exploring: "Exploring",
+        ExploringSubtitle: "Actively expanding my professional focus into next-gen software architectures.",
+        Projects: "03 // Projects",
+        FeaturedProjects: "Featured Projects",
+        ProjectsSubtitle: "A showcase of systems, design architectures, and data analysis experiments built during my studies.",
     },
 
     pt: {
@@ -68,7 +78,17 @@ const translations = {
         EnglishCertificateTitle: "Certificado de inglês nível B1",
         EnglishCertificateDesc: "Curso intensivo de inglês no Inslington Centre of English em Londres",
         Skills: "Habilidades & Tecnologias",
+        SkillsSubtitle: "Um ecossistema estruturado de ferramentas e tecnologias que utilizo para construir sistemas de software robustos.",
         Languages: "Linguagens",
+        Data: "Dados",
+        ResponsibleDesign: "Design Responsável",
+        DataVisualization: "Visualização de Dados",
+        Tools: "Ferramentas",
+        Exploring: "Explorando",
+        ExploringSubtitle: "Expandindo ativamente meu foco profissional para arquiteturas de software de próxima geração.",
+        Projects: "03 // Projetos",
+        FeaturedProjects: "Projetos em Destaque",
+        ProjectsSubtitle: "Uma mostra de sistemas, arquiteturas de design e experimentos de análise de dados desenvolvidos durante meus estudos."
     }
 };
 

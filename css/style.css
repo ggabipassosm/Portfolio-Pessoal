@@ -625,6 +625,14 @@ h2 {
     line-height: 22px;
 }
 
+.skill-card p {
+    text-align: left;
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
 .tag-list {
     display: flex;
     flex-wrap: wrap;
@@ -663,6 +671,12 @@ h2 {
     color: var(--text-dim);
     line-height: 1.6;
     margin-bottom: 14px;
+}
+
+.projects h1 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 8px;
 }
 
 /* ==========================================================
