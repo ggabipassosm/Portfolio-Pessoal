@@ -81,6 +81,25 @@ const translations = {
       "This responsive, minimalist and fast portfolio built to showcase my academic projects and milestones.",
     comingSoon:
       "✧ More exciting systems currently in development. Coming soon!",
+    MyJourneyTitle: "My Journey",
+    MyJourneySubtitle:
+      "A visual representation of milestones, academic research contributions, and professional growth directions.",
+    University: "University",
+    Universitysubtitle: "Started Software Engineering Degree",
+    UniversityDescription:
+      "Began formal studies at the Federal University of Goiás, committing deeply to algorithms, databases and systems engineering foundations.",
+    Research: "Research",
+    Researchsubtitle: "First Research Project Contribution",
+    ResearchDescription:
+      "Investigated gender participation demographics across scientific production at UFG's CONPEEX, using Pandas for data analysis.",
+    Monitoria: "teaching assistantship",
+    MonitoriaSubtitle: "Teaching Assistant in Data Analysis & Communication",
+    MonitoriaDescription:
+      "Scholarship-holding teaching assistant for the Data Analysis and Communication module at the Federal University of Goiás.",
+    Horizons: "Horizons",
+    HorizonsSubtitle: "Next Goal: Global Experience",
+    HorizonsDescription:
+      "Seeking challenging software engineering roles, internships, and study opportunities abroad.",
   },
 
   pt: {
@@ -143,6 +162,25 @@ const translations = {
       "Este portfólio responsivo, minimalista e rápido foi construído para exibir meus projetos acadêmicos e marcos da minha trajetória.",
     comingSoon:
       "✧ Mais sistemas empolgantes atualmente em desenvolvimento. Em breve!",
+    MyJourneyTitle: "Minha trajetória",
+    MyJourneySubtitle:
+      "Uma representação visual de marcos, contribuições em pesquisas acadêmicas e direções de crescimento profissional.",
+    University: "Universidade",
+    Universitysubtitle: "Início do curso de Engenharia de Software",
+    UniversityDescription:
+      "Início dos estudos formais na Universidade Federal de Goiás, com dedicação profunda a algoritmos, bancos de dados e fundamentos de engenharia de sistemas.",
+    Research: "Iniciação Científica",
+    Researchsubtitle: "Pesquisa de Gênero na Tecnologia",
+    ResearchDescription:
+      "Pesquisa de Iniciação Científica analisando resumos científicos do CONPEEX/UFG para mapear tendências de pesquisa, com foco na participação feminina em áreas STEM.",
+    Monitoria: "Monitoria",
+    MonitoriaSubtitle: "Monitoria em Análise e Comunicação de Dados",
+    MonitoriaDescription:
+      "Monitoria com bolsa de estudos na disciplina de Análise e Comunicação de Dados na Universidade Federal de Goiás.",
+    Horizons: "Horizons",
+    HorizonsSubtitle: "Próximo Objetivo: Experiência Global",
+    HorizonsDescription:
+      "Buscando oportunidades desafiadoras de engenharia de software, estágios e estudos no exterior.",
   },
 };
 
