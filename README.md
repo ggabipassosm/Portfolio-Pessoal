@@ -1,39 +1,26 @@
 PORTFOLIO — GABRIELA
 
-Portfólio pessoal em desenvolvimento, construído para apresentar minha trajetória, projetos e habilidades 
-como estudante de Engenharia de Software.
+Personal portfolio under development, built to showcase my journey, projects, and skills as a Software Engineering student.
 
-Status: em construção — novas seções e ajustes visuais sendo adicionados continuamente.
+Status: under construction. New sections and visual adjustments are being added continuously.
 
-SOBRE O PROJETO:
+ABOUT THE PROJECT
 
-Este portfólio foi projetado no Figma e está sendo implementado do zero em HTML, CSS e JavaScript puro,
-com suporte a:
+This portfolio was designed in Figma and is being implemented from scratch in pure HTML, CSS, and JavaScript, with support for:
 
-- Modo claro / escuro com paleta de cores personalizada (vinho/berry)
-- Tradução EN / PT em tempo real
-- Design responsivo para desktop, tablet e mobile
-- Animações de scroll reveal (elementos aparecem suavemente ao rolar a página)
+Light / dark mode with a custom color palette (wine/berry)
+Real-time EN / PT translation
+Responsive design for desktop, tablet, and mobile
+Scroll reveal animations (elements fade in smoothly as the page scrolls)
 
-Uma versão mobile em React Native está planejada como próxima etapa do projeto.
+A React Native mobile version is planned as the next stage of the project.
 
-SEÇÕES JÁ IMPLEMENTADAS:
- Hero (apresentação inicial);
- Header (navegação, redes sociais, toggle de tema, idioma);
- About Me (sobre mim + linha do tempo de marcos);
- Skills & Technologies (habilidades por categoria);
- Projects (em desenvolvimento);
-  Contact (em desenvolvimento);
+SECTIONS ALREADY IMPLEMENTED: Hero (introduction); Header (navigation, social links, theme toggle, language switch); About Me (about me + milestones timeline); Skills & Technologies 
+(skills by category); Projects (in development); Contact (in development);
 
-TECNOLOGIAS UTILIZADAS:
- HTML5;
- CSS3 (Custom Properties / variáveis de tema);
- JavaScript (vanilla);
- Figma (design e prototipagem);
+TECHNOLOGIES USED: HTML5; CSS3 (Custom Properties / theme variables); JavaScript (vanilla); Figma (design and prototyping);
 
-SOBRE MIM:
+ABOUT ME
 
-Estudante de Engenharia de Software na Universidade Federal de Goiás (UFG), com experiência em monitoria acadêmica, empresa júnior e projetos 
-de análise de dados e front-end. Buscando oportunidades de estágio em TI.
-
-**Este README será atualizado conforme o projeto evolui.**
+Software Engineering student at the Federal University of Goiás (UFG), with experience in academic teaching assistance, a junior enterprise, and data analysis and front-end projects. 
+Looking for IT internship opportunities.
