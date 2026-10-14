@@ -100,6 +100,15 @@ const translations = {
     HorizonsSubtitle: "Next Goal: Global Experience",
     HorizonsDescription:
       "Seeking challenging software engineering roles, internships, and study opportunities abroad.",
+    inquiry: "Inquiry",
+    connectTitle: "Let's Connect",
+    connectSubtitle: "Let's build something meaningful together.",
+    connectDescription:
+      "I'm always open to new opportunities, collaborations, and discussions. Feel free to reach out to me through any of the channels below.",
+    email: "Write an e-mail",
+    linkedin: "Visit my LinkedIn",
+    github: "Visit my GitHub",
+    sayHello: "Say Hello",
   },
 
   pt: {
@@ -181,6 +190,15 @@ const translations = {
     HorizonsSubtitle: "Próximo Objetivo: Experiência Global",
     HorizonsDescription:
       "Buscando oportunidades desafiadoras de engenharia de software, estágios e estudos no exterior.",
+    inquiry: "Contato",
+    connectTitle: "Vamos nos conectar",
+    connectSubtitle: "Vamos construir algo significativo juntos.",
+    connectDescription:
+      "Estou sempre aberta a novas oportunidades, colaborações e discussões. Sinta-se à vontade para entrar em contato comigo através de qualquer um dos canais abaixo.",
+    email: "Enviar um e-mail",
+    linkedin: "Visite meu LinkedIn",
+    github: "Visite meu GitHub",
+    sayHello: "Diga Olá",
   },
 };
 

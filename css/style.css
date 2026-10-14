@@ -973,6 +973,168 @@ h2 {
 }
 
 /* ==========================================================
+   Estilização da seção "Conect"
+========================================================== */
+.connect {
+  padding: 100px 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12.5px;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.eyebrow::before {
+  content: "■ ";
+}
+
+.connect h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 8px;
+  line-height: 1.1;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 24px;
+}
+
+.connect-hero {
+  text-align: center;
+  max-width: 640px;
+  margin: 56px auto 48px;
+}
+
+.connect-hero h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.connect-hero p {
+  font-size: 15px;
+  color: var(--text-dim);
+  line-height: 1.7;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.contact-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 22px;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+.contact-card .card-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.contact-card .icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-card .icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.contact-card .card-top span {
+  font-size: 13px;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.contact-card strong {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.contact-card a.card-link {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12.5px;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.contact-card a.card-link:hover {
+  opacity: 0.8;
+}
+
+.say-hello-wrap {
+  text-align: center;
+}
+
+.say-hello {
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #fff;
+  background: var(--accent);
+  border: none;
+  padding: 16px 36px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.say-hello:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .connect {
+    padding: 60px 20px;
+  }
+  .connect h1 {
+    font-size: 32px;
+  }
+  .connect-hero h2 {
+    font-size: 21px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
    ANIMAÇÃO DE DIGITAÇÃO
 ========================================================== */
 
